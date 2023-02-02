@@ -14,17 +14,36 @@ h2 {
     font-size: 1rem;
 }
 
+#home{
+    margin-top: 3rem;
+}
 
 .navbar {
     margin: 0;
+    padding: 0 !important;
     font-family: 'Play', sans-serif;
     z-index: 1;
     border: none;
-    /* box-shadow: 0 8px 15px -6px white; */
+    box-shadow: 0 8px 15px -6px grey;
+    position: relative;
+    z-index: 2;
 }
 
 .navbar-logo {
     width: 300px;
+}
+
+.nav-btn{
+    border: none;
+    background: none;
+}
+
+.dropdown-menu{
+    width: 220px;
+}
+
+.dropdown-item{
+    white-space: inherit !important;
 }
 
 .logo-heading {
@@ -154,7 +173,7 @@ h2 {
     padding: 1%;
 }
 
-.row{
+.row-alignment{
     background: white;
     margin: 70px 0px;
     padding: 30px 10px;
@@ -182,4 +201,24 @@ h2 {
     display: block;
     margin: auto;
     /* border: 5px solid #ee3b24; */
+}
+
+/* Css for Product page  */
+
+.product-heading{
+    color: #ee3b24;
+    font-weight: bold;
+}
+
+/* Css for Footer  */
+
+.footer-box{
+    margin-top: 3rem;
+    box-shadow: 8px 0 15px -6px grey;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    margin: 0 20px;
+    filter: grayscale(1);
 }
