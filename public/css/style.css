@@ -3,6 +3,7 @@
 
 body {
   font-family: "Play", sans-serif;
+  margin-top: 8rem !important;
 }
 
 h1 {
@@ -25,12 +26,15 @@ h2 {
   z-index: 1;
   border: none;
   box-shadow: 0 8px 15px -6px grey;
-  position: relative;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  background-color: white;
   z-index: 2;
 }
 
 .navbar-logo {
-  width: 300px;
+  width: 250px;
 }
 
 .nav-btn {
@@ -38,12 +42,38 @@ h2 {
   background: none;
 }
 
+.dropdown{
+  transition: all .7s;
+}
+
 .dropdown-menu {
   width: 220px;
 }
 
+.dropdown .dropdown-menu{
+  display: none;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropstart:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+
+.dropstart:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
 .dropdown-item {
   white-space: inherit !important;
+}
+
+.dropdown-divider{
+  margin: 10px !important;
+  /* width: 80%; */
 }
 
 .logo-heading {
@@ -212,6 +242,9 @@ h2 {
 }
 
 /* Css for Product page  */
+#products{
+  overflow: hidden;
+}
 
 #products .row {
   margin: 0;
@@ -224,7 +257,7 @@ h2 {
 }
 
 .product-img img {
-  min-width: 350px;
+  max-width: 500px;
 }
 
 .product-customCol {
