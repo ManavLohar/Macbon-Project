@@ -246,6 +246,8 @@ h2 {
   overflow: hidden;
 }
 
+/* 1: 1515 2: 2020 */
+/* HBP = 3 product, HDDPSAP = 2 p, HPARM = p, MTM = p, PPM = p */
 #products .row {
   margin: 0;
 }
@@ -254,6 +256,8 @@ h2 {
   color: #ee3b24;
   font-weight: bold;
   margin: 3rem 0 !important;
+  font-family: "Play", sans-serif;
+  letter-spacing: 2px;
 }
 
 .product-img img {
@@ -289,4 +293,17 @@ hr{
   font-size: 2rem;
   margin: 0 20px;
   filter: grayscale(1);
+}
+
+@media (max-width: 990px){
+  .navbar-nav{
+    text-align: center;
+  }
+  .dropdown{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
