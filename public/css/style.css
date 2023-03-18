@@ -3,7 +3,7 @@
 
 body {
   font-family: "Play", sans-serif;
-  margin-top: 8rem !important;
+  /* margin-top: 8rem !important; */
 }
 
 h1 {
@@ -16,7 +16,7 @@ h2 {
 }
 
 #home {
-  margin-top: 3rem;
+  margin-top: 9.2rem !important;
 }
 
 .navbar {
@@ -31,10 +31,21 @@ h2 {
   width: 100%;
   background-color: white;
   z-index: 2;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.navbar.sticky {
+  opacity: 0.8;
 }
 
 .navbar-logo {
   width: 250px;
+  transition: 0.6s
+}
+
+.navbar-logo.fixLogo {
+  width: 200px;
 }
 
 .nav-btn {
@@ -42,15 +53,32 @@ h2 {
   background: none;
 }
 
-.dropdown{
-  transition: all .7s;
+.dropdown {
+  transition: all 0.7s;
 }
 
 .dropdown-menu {
   width: 220px;
 }
 
-.dropdown .dropdown-menu{
+.dropdown:hover {
+  animation: dropdownMenu .5s;
+}
+
+@keyframes dropdownMenu {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.dropdown-menu[data-bs-popper] {
+  margin-top: 0 !important;
+}
+
+.dropdown .dropdown-menu {
   display: none;
 }
 
@@ -71,7 +99,7 @@ h2 {
   white-space: inherit !important;
 }
 
-.dropdown-divider{
+.dropdown-divider {
   margin: 10px !important;
   /* width: 80%; */
 }
@@ -86,10 +114,12 @@ h2 {
 }
 
 .carousel {
+  position: relative;
   top: 0;
   height: 600px;
   width: 100%;
   background: black;
+  z-index: 1;
 }
 
 .carousel-image {
@@ -150,7 +180,7 @@ h2 {
 }
 
 .carousel-caption {
-  bottom: 150px !important;
+  bottom: 80px !important;
   font-family: "Play", sans-serif;
 }
 
@@ -205,6 +235,16 @@ h2 {
   font-weight: bold;
 }
 
+.about-heading {
+  font-weight: bold;
+  color: #ee3b24;
+}
+
+.about-para {
+  font-size: 1.2rem;
+  color: rgb(85, 85, 85);
+}
+
 .about-container {
   padding: 1%;
 }
@@ -242,8 +282,12 @@ h2 {
 }
 
 /* Css for Product page  */
-#products{
+#products {
   overflow: hidden;
+}
+
+#HDDP-model-1 {
+  margin-bottom: 5rem !important;
 }
 
 /* 1: 1515 2: 2020 */
@@ -271,16 +315,25 @@ h2 {
   align-items: center;
 }
 
+.product-customCol h3{
+  color: #ee3b24;
+}
+
 .table {
   border: 2px solid black;
   margin: 2rem 0;
 }
 
-hr{
-    width: 80%;
-    margin: 2rem auto !important;
+.customProduct{
+  padding: 10px;
+  width: 350px;
+  border: 2px solid rgb(227, 227, 227);
 }
 
+hr {
+  width: 80%;
+  margin: 2rem auto !important;
+}
 
 /* Css for Footer  */
 
@@ -295,15 +348,18 @@ hr{
   filter: grayscale(1);
 }
 
-@media (max-width: 990px){
-  .navbar-nav{
+@media (max-width: 990px) {
+  .navbar-nav {
     text-align: center;
   }
-  .dropdown{
+  .dropdown {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .product-img img{
+    max-width: 450px;
   }
 }
