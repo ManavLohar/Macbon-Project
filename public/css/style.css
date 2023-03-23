@@ -1,9 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Play", sans-serif;
   /* margin-top: 8rem !important; */
+}
+
+#preloader{
+  position: fixed;
+  display: flex;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader span{
+  border: 14px solid #3e4095;
+  border-top: none;
+  border-bottom: none;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transition: .7s;
+  animation: circle1 .7s linear infinite;
+}
+
+@keyframes circle1 {
+  from{
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(-359deg)
+  }
+}
+
+#preloader span:last-child{
+  position: absolute;
+  border: 14px solid #ee3b24;
+  border-bottom: none;
+  border-top: none;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  animation: circle2 .7s linear infinite;
+}
+
+@keyframes circle2 {
+  from{
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(359deg)
+  }
 }
 
 h1 {
@@ -127,6 +181,7 @@ h2 {
   opacity: 0.4;
 }
 
+
 .animatedDown {
   position: relative;
   animation: fadeDown;
@@ -180,7 +235,7 @@ h2 {
 }
 
 .carousel-caption {
-  bottom: 80px !important;
+  bottom: 150px !important;
   font-family: "Play", sans-serif;
 }
 
@@ -196,8 +251,9 @@ h2 {
   width: 60%;
   margin: auto;
   margin-top: 2rem;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.9;
+  /* font-weight: 100; */
 }
 
 .nav-link-color {

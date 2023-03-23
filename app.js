@@ -16,6 +16,10 @@ app.get("/", function(req, res){
 //     res.render("about");
 // })
 
+app.get("/gallery", function(req, res){
+    res.render("gallery");
+})
+
 app.get("/products", function(req, res){
     res.render("products");
 })
