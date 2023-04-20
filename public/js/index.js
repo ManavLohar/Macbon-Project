@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
 
 // -----------AOS property----------- 
 AOS.init({
-    offset: 500,
+    offset: 350,
     duration: 600
 })
 
