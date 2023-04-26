@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Prompt:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
 html{
   scroll-behavior: smooth;
@@ -95,9 +97,9 @@ body {
 .icon img{
   height: 40px;
   width: 40px;
-  box-shadow: 1px 1px 5px grey;
+  border-right: 1px solid black;
   border-radius: 10px 0 0 10px;
-  background-color: white;
+  background-color: #102648;
 }
 
 .icon span{
@@ -228,6 +230,19 @@ h2 {
 .carousel-image {
   height: 600px;
   opacity: 0.4;
+}
+
+.carousel-caption h5{
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+.carousel-caption p{
+  font-family: 'Prompt', sans-serif;
+}
+
+.carousel-caption p{
+  font-weight: 300;
 }
 
 
@@ -472,6 +487,9 @@ hr {
   .nav-link-color{
     font-size: 15px;
   }
+  .nav-item{
+    margin: 5px 0 !important;
+  }
   .dropstart .dropdown-menu[data-bs-popper]{
     display: block !important;
     top: 23px !important;
@@ -629,7 +647,7 @@ hr {
     height: 525px;
   }
   .carousel-caption{
-    bottom: 145px !important;
+    bottom: 110px !important;
   }
   .carousel-image{
     height: 525px;
@@ -723,7 +741,7 @@ hr {
     height: 450px;
   }
   .carousel-caption{
-    bottom: 130px !important;
+    bottom: 78px !important;
   }
   .carousel-caption h5{
     font-size: 20px;
